@@ -16,6 +16,7 @@ class Index:
         image = form['a']
         #image = Image.open("rute/")
 
+        '''tensorflow.executing_eagerly()
         detection_graph = tensorflow.Graph()
         with detection_graph.as_default():
             od_graph_def = tensorflow.GraphDef()
@@ -28,7 +29,7 @@ class Index:
                                                                     max_num_classes=NUM_CLASSES,
                                                                     use_display_name=True)
         category_index = label_map_util.create_category_index(categories)
-        #model = tensorflow.keras.models.load_model(ruteModel)
+        model = tensorflow.keras.models.load_model(ruteModel)'''
 
         np.set_printoptions(suppress=True)
         model = tensorflow.keras.models.load_model(ruteModel)
